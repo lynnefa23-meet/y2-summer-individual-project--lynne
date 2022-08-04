@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title>Signin</title>
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        h4 {text-align: center;}
+
+
+    </style>
+</head>
+<body>
+
+    <body style="background-color: black;"> 
+    <center>
+    <img src="static/images/logo.png" width="500" height="100" class="center">
+
+
+    <a href="/likes"><button>go to likes</button>
+
+
+    {% for i in songs%}
+    <br>
+     <a href="{{songs[i]}}" target="_blank">{{i}}</a>
+     <br>
+    <form action = "/add_likes" method = "POST">
+    	<input type ="hidden" name="songs" value={{i}}>
+    	<br>
+    	<button type = "submit"> add to likes</button>
+    </form>
+<!--     <br>
+    <a href="/likes/{{i}}"><button> add to likes</button></a>
+    <a href="/likes.html"><button> add to likes </button>
+    <br>
+    <a href="{{songs[i]}}">{{i}}</a>
+    <br>  -->
+
+
+    {% endfor %}
+	
+	</center>
+
+</body>
+</html>

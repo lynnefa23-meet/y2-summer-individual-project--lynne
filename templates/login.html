@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signin</title>
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        h4 {text-align: center;}
+
+
+    </style>
+</head>
+<body>
+    <body style="background-color: black;"> 
+    <!-- <img src="static/images/profile_thumb_nail.jpeg" width="100" height="100"> -->
+    <center>
+    <img src="static/images/logo.png" width="500" height="100" class="center">
+    <form method="post" action="/login">
+        <h4 style="color:white;"> Log in to your account </h4>
+        <p style="color:white;">
+        Please fill up your information below to sign in.
+        </p>
+
+        <div>
+            <label style="color:white;">Email address</label>
+            <div>
+                <input type="email"  name="email" id="emailStr" required>
+            </div>
+        </div>
+
+        <div>
+            <label style="color:white;">Password</label>
+            <div class="input-group">
+                <input type="password"  name="password" minlength="6">
+            </div>
+        </div>
+        
+        <div>
+            <br>
+            <input type="submit"/>
+        </div>
+    </form>
+    <br>
+    <a href="/"><button>signup</button></a>
+</center>
+</body>
+</html>
